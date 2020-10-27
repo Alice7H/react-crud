@@ -1,0 +1,40 @@
+.user-edit {
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    background: none;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-edit input {
+    background: aliceblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 0 20px 20px;
+    font-size: 16px;
+    color: dimgray;
+}
+
+.user-edit label {
+    font-size: 16px;
+    color:black;
+    font-weight: bold;
+    margin: 10px 0 0 10px;
+}
+
+.user-edit button {
+    margin: 0 0 10px 20px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.user-edit button:hover {
+    background: #757F9A;
+    color: #D7DDE8;
+}
