@@ -9,7 +9,7 @@ import Delete from './pages/user/delete';
 const Routes = () => (
     <BrowserRouter>
         <Switch>
-            <Route exact path='/users' component={MainUser} />
+            <Route exact path='/' component={MainUser} />
             <Route path='/users/:id' component={Details} />
             <Route path='/create-user' component={Create}/>
             <Route path='/edit-user/:id' component={Edit}/>
