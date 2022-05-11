@@ -34,7 +34,7 @@ export default function Delete() {
 
     if(redirect)
     {
-        return <Redirect to='/users'/>
+        return <Redirect to='/'/>
     }else {  
         return (
             <fieldset>
@@ -44,7 +44,7 @@ export default function Delete() {
                     <p>Are you sure that you want to delete this user?</p>
                     <button onClick={handleClick}>Remove</button>
                     <br/><br/>
-                    <button><Link to={`/users`}>Back</Link></button>
+                    <button><Link to={`/`}>Back</Link></button>
                 </div>
             </fieldset>
         )

@@ -22,6 +22,7 @@ export default function Details() {
     return (
         <div className='user-info'>
             <h2> {user.name}</h2>
+            <p>Username: {user.username} </p>
             <p>Site: {user.website}</p>
             <p>Email: {user.email}</p>
             <p>Phone: {user.phone}</p>
@@ -34,7 +35,7 @@ export default function Details() {
             <p>Catchphrase: {user.company.catchPhrase}</p>
             <p>BS: {user.company.bs}</p>
             <br/>
-            <Link to={`/users`}>Back</Link>
+            <Link to={`/`}>Back</Link>
             <Link to={`/edit-user/${id}`}>Edit</Link>
             <Link to={`/delete-user/${id}`}>Delete</Link>
         </div>

@@ -10,9 +10,7 @@ export default function Main() {
         function getUsers() {
             fetch('https://jsonplaceholder.typicode.com/users')
             .then( (response) => response.json())
-            .then( (json) => {
-                setUsers(json);
-            })
+            .then( (json) => setUsers(json))
             .catch((error) => alert(`Error ${error}`))
         }
 
@@ -21,19 +19,18 @@ export default function Main() {
 
     return (
         <div className='user-list'>
-        { users.map((user) => {  
-                return (
-                    <div key={user.id}>
-                        <article>
-                            <h3> Welcome {user.username} </h3>
-                            <p>Name: {user.name}</p>
-                            <p>Email: {user.email}</p>
-                            <p>Phone: {user.phone}</p>
-                            <p><Link to={`/users/${user.id}`}>Details</Link></p>
-                            <br/>
-                        </article>
-                    </div>      
-        )})}
+        { users.map(user =>  
+            <div key={user.id}>
+                <article>
+                    <h3> Welcome {user.username} </h3>
+                    <p>Name: {user.name}</p>
+                    <p>Email: {user.email}</p>
+                    <p>Phone: {user.phone}</p>
+                    <p><Link to={`/users/${user.id}`}>Details</Link></p>
+                    <br/>
+                </article>
+            </div>      
+        )}
         </div>
     )
 }

@@ -34,7 +34,13 @@
     cursor: pointer;
 }
 
-.user-edit button:hover {
+.user-edit button a {
+    text-decoration: none;
+    color: black;
+}
+
+.user-edit button:hover, 
+.user-edit button:hover a {
     background: #757F9A;
     color: #D7DDE8;
 }

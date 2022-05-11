@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Redirect, useParams } from 'react-router-dom';
+import { Redirect, Link, useParams } from 'react-router-dom';
 import './index.css';
 import { defaultUser } from '../../../components/defaultUser';
 
@@ -19,12 +19,6 @@ export default function Edit() {
         }).catch((error) => alert(`Erro ${error}`))
     }, [id])
 
-    // const handleInputChange = (event) => {
-    //     const auxValues = { ...user };
-    //     auxValues[event.target.name] = event.target.value;
-    //     setUser(auxValues);
-    // }
-    
     const handleInputChange = (event) => {
         setUser(prevUser =>({
             ...prevUser,   
@@ -145,6 +139,9 @@ export default function Edit() {
                     placeholder='Catchphrase' onChange={handleInputCompanyChange}/>
                     <br/>
                     <button type='submit'>Submit</button>
+                    <button type='button'>
+                        <Link to={`/`}>Back</Link>
+                    </button>
                     <br/>
                 </form>
             </div>
